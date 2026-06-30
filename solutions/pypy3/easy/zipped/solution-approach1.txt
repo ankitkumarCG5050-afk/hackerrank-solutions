@@ -1,0 +1,23 @@
+# ──────────────────────────────────────────────────
+# Problem     Zipped!
+# Difficulty  Easy
+# Subdomain   Built-Ins
+# Platform    HackerRank
+# Language    pypy3
+# Status      Accepted
+# Submitted   2026-06-30, 02:54 p.m.
+# ──────────────────────────────────────────────────
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Read the first line containing number of students (N) and number of subjects (X)
+n, x = map(int, input().split())
+
+# Read the scores for each subject and store them in a list
+scores = []
+for _ in range(x):
+    scores.append(list(map(float, input().split())))
+
+# Use zip(*scores) to regroup the data by student
+for student_scores in zip(*scores):
+    # Calculate and print the average for each student
+    print(sum(student_scores) / x)
