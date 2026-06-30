@@ -1,0 +1,26 @@
+# ──────────────────────────────────────────────────
+# Problem     Any or All
+# Difficulty  Easy
+# Subdomain   Built-Ins
+# Platform    HackerRank
+# Language    pypy3
+# Status      Accepted
+# Submitted   2026-06-30, 02:54 p.m.
+# ──────────────────────────────────────────────────
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT# Read the number of integers (not strictly needed for the logic, but required to parse the input)
+_ = input()
+
+# Read the space-separated integers as a list of strings
+# Keeping them as strings makes it very easy to check for palindromes
+numbers = input().split()
+
+# Condition 1: Check if ALL elements are positive integers
+# (We convert to int just for the positive comparison check)
+all_positive = all(int(x) > 0 for x in numbers)
+
+# Condition 2: Check if ANY element reads the same forward and backward
+any_palindrome = any(x == x[::-1] for x in numbers)
+
+# The final condition requires BOTH to be true
+print(all_positive and any_palindrome)
