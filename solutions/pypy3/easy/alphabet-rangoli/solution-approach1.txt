@@ -1,0 +1,22 @@
+# ──────────────────────────────────────────────────
+# Problem     Alphabet Rangoli
+# Difficulty  Easy
+# Subdomain   Strings
+# Platform    HackerRank
+# Language    pypy3
+# Status      Accepted
+# Submitted   2026-06-30, 02:55 p.m.
+# ──────────────────────────────────────────────────
+
+def print_rangoli(size):
+    alpha = 'abcdefghijklmnopqrstuvwxyz'
+    width = 4 * size - 3
+    lines = []
+
+    for i in range(size):
+        s = "-".join(alpha[size-1:i:-1] + alpha[i:size])
+        lines.append(s.center(width, "-"))
+
+    print("\n".join(lines[:0:-1] + lines))
+
+
