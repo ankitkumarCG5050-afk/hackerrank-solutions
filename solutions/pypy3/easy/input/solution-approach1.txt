@@ -1,0 +1,19 @@
+# ──────────────────────────────────────────────────
+# Problem     Input()
+# Difficulty  Easy
+# Subdomain   Built-Ins
+# Platform    HackerRank
+# Language    pypy3
+# Status      Accepted
+# Submitted   2026-06-30, 02:51 p.m.
+# ──────────────────────────────────────────────────
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# In Python 3, standard input() handles strings
+x, k = map(int, input().split())
+
+# Read the polynomial string and manually evaluate it using eval()
+polymer_string = input()
+result = eval(polymer_string)
+
+print(result == k)
